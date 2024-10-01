@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+    margin: 0;
+}
+
+/* Wadah bunga dan tangkai */
+.flower-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Tangkai */
+.stem {
+    width: 10px;
+    height: 200px;
+    background-color: #228b22;
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Daun */
+.leaf {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: #32cd32;
+    border-radius: 50%;
+}
+
+.leaf-left {
+    left: -40px;
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.leaf-right {
+    right: -40px;
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+/* Bunga */
+.flower {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    animation: bloom 5s infinite ease-in-out;
+}
+
+/* Kelopak bunga */
+.petal {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #ff1493;
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+}
+
+/* Penempatan kelopak */
+.petal1 {
+    transform: rotate(0deg) translateY(-20px);
+}
+
+.petal2 {
+    transform: rotate(60deg) translateY(-20px);
+}
+
+.petal3 {
+    transform: rotate(120deg) translateY(-20px);
+}
+
+.petal4 {
+    transform: rotate(180deg) translateY(-20px);
+}
+
+.petal5 {
+    transform: rotate(240deg) translateY(-20px);
+}
+
+.petal6 {
+    transform: rotate(300deg) translateY(-20px);
+}
+
+/* Pusat bunga (mawar) */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Animasi mekarnya bunga */
+@keyframes bloom {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
